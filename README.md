@@ -59,6 +59,9 @@ Requires [Neovim](https://neovim.io/) (>= 0.8)
 - [LSP installer config](https://github.com/williamboman/mason-lspconfig.nvim)- LSP manson config
 - [LSP null](https://github.com/jose-elias-alvarez/null-ls.nvim) -- For formatters and linters
 - [LSP highlighting](https://github.com/RRethy/vim-illuminate) -- LSP highlighting
+- [LSP saga](https://github.com/glepnir/lspsaga.nvim) -- LSP saga
+
+
 - [File browser](https://github.com/nvim-tree/nvim-tree.lua) - File browser
 - [Icons](https://github.com/ryanoasis/vim-devicons) -- Icons
 - [Status line](https://github.com/nvim-lualine/lualine.nvim) - Status line
@@ -66,5 +69,5 @@ Requires [Neovim](https://neovim.io/) (>= 0.8)
 - [Comment](https://github.com/numToStr/Comment.nvim) - Comments in neovim
 - [Syntax highlighting](https://github.com/nvim-treesitter/nvim-treesitter) - Syntax highlighting
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy finder
-
+- [Telescope fzf](https://github.com/nvim-telescope/telescope-fzf-native.nvim) - Telescope fzf
 
