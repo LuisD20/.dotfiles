@@ -44,3 +44,27 @@ exec awesome
 
 Requires [Neovim](https://neovim.io/) (>= 0.8)
 
+- [Packer](https://github.com/wbthomason/packer.nvim)- Package management
+- [Pleanry](https://github.com/nvim-lua/plenary.nvim) - Lua functions
+- [Popup](https://github.com/nvim-lua/popup.nvim) - Popup API from vim
+- [Colorscheme](https://github.com/cocopon/iceberg.vim/) - Dark blue color scheme
+- [Completions](https://github.com/hrsh7th/nvim-cmp) - Completion pluging
+- [Completions buffer](https://github.com/hrsh7th/cmp-buffer)- Completion for buffers
+- [Completions paths](https://github.com/hrsh7th/cmp-path) - Completions for paths
+- [Completions cmd](https://github.com/hrsh7th/cmp-cmdline) - Completions for cmd
+- [Completions snippet](https://github.com/saadparwaiz1/cmp_luasnip) - Completions for snippets
+- [Snipet engine](https://github.com/L3MON4D3/LuaSnip) - Snippets for neovim
+- [LSP](https://github.com/neovim/nvim-lspconfig)- LSP completions for languages
+- [LSP installer](https://github.com/williamboman/mason.nvim) - LSP manson installer
+- [LSP installer config](https://github.com/williamboman/mason-lspconfig.nvim)- LSP manson config
+- [LSP null](https://github.com/jose-elias-alvarez/null-ls.nvim) -- For formatters and linters
+- [LSP highlighting](https://github.com/RRethy/vim-illuminate) -- LSP highlighting
+- [File browser](https://github.com/nvim-tree/nvim-tree.lua) - File browser
+- [Icons](https://github.com/ryanoasis/vim-devicons) -- Icons
+- [Status line](https://github.com/nvim-lualine/lualine.nvim) - Status line
+- [Vim-surround](https://github.com/tpope/vim-surround) - Surroundings
+- [Comment](https://github.com/numToStr/Comment.nvim) - Comments in neovim
+- [Syntax highlighting](https://github.com/nvim-treesitter/nvim-treesitter) - Syntax highlighting
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim) - Fuzzy finder
+
+
