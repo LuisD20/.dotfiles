@@ -51,7 +51,6 @@ return packer.startup(function(use)
   use 'folke/tokyonight.nvim'
 
   -- file explorer
-  --use { 'nvim-tree/nvim-tree.lua', requires = { 'nvim-tree/nvim-web-devicons', } }
   use {
     "nvim-neo-tree/neo-tree.nvim",
       branch = "v2.x",
@@ -66,10 +65,9 @@ return packer.startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
 
   -- status line
-  --use 'nvim-lualine/lualine.nvim'
   use 'akinsho/nvim-bufferline.lua'
   use 'rebelot/heirline.nvim'
-  use 'SmiteshP/nvim-navic'
+  use { 'SmiteshP/nvim-navic', requires = "neovim/nvim-lspconfig"}
   
   -- fuzzy finder
   use 'nvim-telescope/telescope.nvim'
@@ -86,6 +84,7 @@ return packer.startup(function(use)
 	use { 'saadparwaiz1/cmp_luasnip', after = "nvim-cmp" } -- for autocompletion
 	use { 'hrsh7th/cmp-buffer', after = "nvim-cmp" } -- buffer completions
   use { 'hrsh7th/cmp-path', after = "nvim-cmp" } -- path completions
+  use { 'hrsh7th/cmp-cmdline', after = "nvim-cmp" } -- cmd for terminal
   use { 'hrsh7th/cmp-nvim-lsp', after = "nvim-cmp" } -- cmd for lsp
 
   -- snippet engine
@@ -118,21 +117,17 @@ return packer.startup(function(use)
   use 'lewis6991/impatient.nvim'
   use 'max397574/better-escape.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
-
   use "stevearc/dressing.nvim" 
-
-
   use "Shatur/neovim-session-manager"
 
   use { 'goolord/alpha-nvim', requires = { 'kyazdani42/nvim-web-devicons' } }
-  --use { 'folke/trouble.nvim', requires = "kyazdani42/nvim-web-devicons" }
+  use { 'folke/trouble.nvim', requires = "kyazdani42/nvim-web-devicons" }
 
   -- terminal
   use 'akinsho/toggleterm.nvim'
 
 	-- git integration
 	use 'lewis6991/gitsigns.nvim' -- show line modifications on left hand side
-  --use 'dinhhuy258/git.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

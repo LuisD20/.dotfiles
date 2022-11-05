@@ -27,10 +27,9 @@ require 'user.plugins.dressing'
 require 'user.plugins.cmp'
 require 'user.plugins.mason'
 require 'user.plugins.lsp_config'
---require 'user.plugins.lsp.null-ls'
+require 'user.plugins.null_ls'
 require 'user.plugins.aerial'
 require 'user.plugins.luasnip'
-
 require 'user.plugins.treesitter'
 
 require 'user.plugins.gitsigns'
