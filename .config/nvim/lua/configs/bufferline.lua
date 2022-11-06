@@ -3,7 +3,7 @@ if not status_ok then
   return
 end
 
-local icons = require "user.core.icons"
+local icons = require "core.icons"
 
 local close_func = function(bufnum)
   local bufdelete_avail, bufdelete = pcall(require, "bufdelete")

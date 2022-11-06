@@ -16,26 +16,7 @@ if not cmp_status then
 	return
 end
 
-local lspsymbols = 
-{
-  NONE = "",
-  Array = "",
-  Boolean = "⊨",
-  Class = "",
-  Constructor = "",
-  Key = "",
-  Namespace = "",
-  Null = "NULL",
-  Number = "#",
-  Object = "⦿",
-  Package = "",
-  Property = "",
-  Reference = "",
-  Snippet = "",
-  String = "𝓐",
-  TypeParameter = "",
-  Unit = "",
-}
+
 
 local border_opts =
   { border = "single", winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None" }
@@ -50,7 +31,6 @@ cmp.setup({
   {
     fields = { "kind", "abbr", "menu" },
     format = lspkind.cmp_format({
-      symbol_map = lspsymbols,
 			maxwidth = 50,
 			ellipsis_char = "...",
 		}),
@@ -71,18 +51,23 @@ cmp.setup({
     completion = cmp.config.window.bordered(border_opts),
     documentation = cmp.config.window.bordered(border_opts),
   },
-  mapping = {
-		["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-		["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
-		["<C-b>"] = cmp.mapping.scroll_docs(-4),
-		["<C-f>"] = cmp.mapping.scroll_docs(4),
-		["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
-		["<C-e>"] = cmp.mapping.abort(), -- close completion window
-		["<CR>"] = cmp.mapping.confirm({ select = false }),
-  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.close(),
+    ['<CR>'] = cmp.mapping.confirm({
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true
+    }),
+  }),
   experimental = 
   {
     ghost_text = true,
   },
 })
 
+vim.cmd [[
+  set completeopt=menuone,noinsert,noselect
+  highlight! default link CmpItemKind CmpItemMenuDefault
+]]

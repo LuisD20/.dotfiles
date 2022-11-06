@@ -19,16 +19,20 @@ end
 local languages = 
 {
   "cssls",
+  "cssmodules_ls",
   "html",
   "jsonls",
   "tsserver",
+  "quick_lint_js",
+  "graphql",
+  "eslint",
   "sumneko_lua",
 }
 
 local formatters = 
 {
-  "prettier",
   "stylua",
+  "xo",
   "eslint_d",
 }
 

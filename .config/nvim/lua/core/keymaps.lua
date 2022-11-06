@@ -1,26 +1,16 @@
+-- Shorten function name
+local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
-local keymap = vim.api.nvim_set_keymap
-
--- Shorten function name
-local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-keymap('n', 'x', '"_x', opts) 
-
--- Modes
---   normal_mode = 'n',
---   insert_mode = 'i',
---   visual_mode = 'v',
---   visual_block_mode = 'x',
---   term_mode = 't',
---   command_mode = 'c',
-
--- Normal --
+-----------------
+-- Normal Mode --
+-----------------
 -- Better window navigation
 keymap('n', 's<ledft>', '<C-w>h', opts)      -- move rigth
 keymap('n', 's<up>', '<C-w>k', opts)      -- move left
@@ -51,18 +41,18 @@ keymap('n', '<C-a>', 'gg<S-v>G', opts)
 -- nvim-tree
 keymap('n', '<leader>e', '<CMD>NeoTreeShowToggle<CR>', opts)
 
--- telescope
-keymap('n', 'ff', '<CMD>Telescope find_files<CR>', opts)
-keymap('n', 'fs', '<CMD>Telescope live_grep<CR>', opts)
-keymap('n', 'fc', '<CMD>Telescope grep_string<CR>', opts)
-keymap('n', 'fb', '<CMD>Telescope buffers<CR>', opts)
-keymap('n', 'fh', '<CMD>Telescope help_tags<CR>', opts)
+-- Telescope fuzzy finder
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
+keymap('n', '<leader>fc', '<CMD>Telescope grep_string<CR>', opts)
+keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
+keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
 
 -- telescope git commands (not on youtube nvim video)
-keymap("n", "gc", "<cmd>Telescope git_commits<cr>", opts) -- list all git commits (use <cr> to checkout) ["gc" for git commits]
-keymap("n", "gfc", "<cmd>Telescope git_bcommits<cr>", opts) -- list git commits for current file/buffer (use <cr> to checkout) ["gfc" for git file commits]
-keymap("n", "gb", "<cmd>Telescope git_branches<cr>", opts) -- list git branches (use <cr> to checkout) ["gb" for git branch]
-keymap("n", "gs", "<cmd>Telescope git_status<cr>", opts) -- list current changes per file with diff preview ["gs" for git status]
+keymap("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", opts) -- list all git commits (use <cr> to checkout) ["gc" for git commits]
+keymap("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>", opts) -- list git commits for current file/buffer (use <cr> to checkout) ["gfc" for git file commits]
+keymap("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", opts) -- list git branches (use <cr> to checkout) ["gb" for git branch]
+keymap("n", "<leader>gs", "<cmd>Telescope git_status<cr>", opts) -- list current changes per file with diff preview ["gs" for git status]
 
 -- restart lsp server (not on youtube nvim video)
 keymap("n", "rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
@@ -93,7 +83,6 @@ keymap('t', '<C-h>', '<C-\\><C-N><C-w>h', term_opts)
 keymap('t', '<C-j>', '<C-\\><C-N><C-w>j', term_opts)
 keymap('t', '<C-k>', '<C-\\><C-N><C-w>k', term_opts)
 keymap('t', '<C-l>', '<C-\\><C-N><C-w>l', term_opts)
-
 
 
 

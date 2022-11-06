@@ -28,7 +28,7 @@ dashboard.section.buttons.val = {
   button("q", " Quit", ":qa<CR>"),
 }
 local function footer()
-  return "LuisDa Editor"
+  return "Luis's Editor"
 end
 
 dashboard.section.footer.val = footer()
