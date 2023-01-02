@@ -29,7 +29,6 @@ require 'configs.indentline'         -- Indentation guides to all lines
 require 'configs.scrollbar'          -- Extensible Neovim Scrollbar
 
 require 'configs.wilder'             -- A more adventurous wildmenu
-require 'configs.zenmode'            -- Distraction-free coding for Neovim
 
 require 'configs.telescope'          -- Fuzzy finder
 require 'configs.proyect'            -- The superior project management solution for neovim.
@@ -38,6 +37,13 @@ require 'configs.gitsigns'           -- Git Integration
 require 'configs.autopairs'          -- Autopairs
 require 'configs.comment'            -- Comment toggler for Neovim written in Lua
 require 'configs.toggleterm'         -- Floating Terminal
+
+require 'configs.completion'         -- cmp for neovim
+require 'configs.lsp.mason'          -- Vscode cmp 
+require 'configs.lsp.lspkind'        -- Vscode cmp 
+require 'configs.lsp.lspconfig'      -- Vscode cmp 
+require 'configs.lsp.lspsaga'        -- Vscode cmp 
+require 'configs.lsp.null-ls'        -- Vscode cmp 
 
 require 'configs.treesitter'         -- Treesitter syntax highlighting
 

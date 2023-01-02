@@ -12,5 +12,5 @@ nvim_comment.setup ({
    comment_empty_trim_whitespace = true,   -- Trim empty comment whitespace
    hook = function()
       require("ts_context_commentstring.internal").update_commentstring()
-    end,                       
+    end                 
 })

@@ -66,7 +66,6 @@ return packer.startup(function(use)
   use 'petertriho/nvim-scrollbar'                          -- Extensible Neovim Scrollbar
   use 'sunjon/shade.nvim'                                  -- Shade is a Neovim plugin that dims your inactive windows
   use 'gelguy/wilder.nvim'                                 -- A more adventurous wildmenu
-  use 'folke/zen-mode.nvim'                                -- Distraction-free coding for Neovim
   use 'stevearc/dressing.nvim'                             -- Neovim plugin to improve the default vim.ui interfaces
   use 'goolord/alpha-nvim'                                 -- Lua powered greeter like vim-startify / dashboard-nvim
   use { 'SmiteshP/nvim-navic',                             -- Simple winbar/statusline
@@ -81,6 +80,27 @@ return packer.startup(function(use)
       'MunifTanjim/nui.nvim',
     }
   }
+
+  ---------------------
+  --   Completions   --
+  ---------------------
+
+  use 'hrsh7th/nvim-cmp'                                  -- The completion plugin
+  use { 'hrsh7th/cmp-nvim-lsp', after = 'nvim-cmp' }      -- Cmd for lsp
+	use { 'hrsh7th/cmp-buffer', after = 'nvim-cmp' }        -- Buffer completions
+  use { 'hrsh7th/cmp-path', after = 'nvim-cmp' }          -- Path completions
+  use { 'hrsh7th/cmp-cmdline', after = 'nvim-cmp' }       -- Cmd for terminal
+	use { 'saadparwaiz1/cmp_luasnip', after = 'nvim-cmp' }  -- Cmp integration whit luasnip
+
+  use 'neovim/nvim-lspconfig'                             -- Lsp enabled
+  use 'onsails/lspkind.nvim'                              -- vs-code like icons for autocompletion
+  use 'williamboman/mason.nvim' -- simple to use language server installer
+  use { 'williamboman/mason-lspconfig.nvim', after = { 'mason.nvim', 'nvim-lspconfig' } } -- config for mason
+  use 'jose-elias-alvarez/null-ls.nvim' -- for formatters and linters
+	use { 'jayp0521/mason-null-ls.nvim', after = { 'mason.nvim', 'null-ls.nvim' }} -- bridges gap b/w mason & null-ls
+
+  use { 'L3MON4D3/LuaSnip', wants = 'friendly-snippets' } -- Snippets engien
+	use { 'rafamadriz/friendly-snippets', opt = true }      -- Useful snippets
 
   --------------------
   --     Finders    --
@@ -109,7 +129,7 @@ return packer.startup(function(use)
   --      Git       --
   --------------------
 
-	use 'lewis6991/gitsigns.nvim' -- Git integration for buffers
+	use 'lewis6991/gitsigns.nvim'                           -- Git integration for buffers
 
   --------------------
   --      Utils     --
@@ -128,30 +148,10 @@ return packer.startup(function(use)
 
   use 'nvim-treesitter/nvim-treesitter'                       -- Treesitter syntax highlighting
 
-  -- completions plugins
-  --use 'hrsh7th/nvim-cmp' -- The completion plugin
-	--use { 'saadparwaiz1/cmp_luasnip', after = 'nvim-cmp' } -- for autocompletion
-	--use { 'hrsh7th/cmp-buffer', after = 'nvim-cmp' } -- buffer completions
-  --use { 'hrsh7th/cmp-path', after = 'nvim-cmp' } -- path completions
-  --use { 'hrsh7th/cmp-cmdline', after = 'nvim-cmp' } -- cmd for terminal
-  --use { 'hrsh7th/cmp-nvim-lsp', after = 'nvim-cmp' } -- cmd for lsp
-
-  -- snippet engine
-  --use { 'L3MON4D3/LuaSnip', wants = 'friendly-snippets' }
-	--use { 'rafamadriz/friendly-snippets', opt = true } -- useful snippets
 
   -- lsp config
-  --use 'neovim/nvim-lspconfig' -- lsp enabled
-  --use 'williamboman/mason.nvim' -- simple to use language server installer
-  --use { 'williamboman/mason-lspconfig.nvim', after = { 'mason.nvim', 'nvim-lspconfig' } } -- config for mason
-  --use 'onsails/lspkind.nvim' -- vs-code like icons for autocompletion
   --use 'stevearc/aerial.nvim'
   --use 'folke/lsp-colors.nvim'
-
-  -- formating and linting
-  --use 'jose-elias-alvarez/null-ls.nvim' -- for formatters and linters
-	--use { 'jayp0521/mason-null-ls.nvim', after = { 'mason.nvim', 'null-ls.nvim' }} -- bridges gap b/w mason & null-ls
-
 
   --use 'Shatur/neovim-session-manager'
   --use({ 'toppair/peek.nvim', run = 'deno task --quiet build:fast' })
